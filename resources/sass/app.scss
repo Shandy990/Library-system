@@ -1,0 +1,18 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import "style";
+@import "add";
+@import "detail";
+@import 'books-collection';
+@import 'auth';
+@import 'genre-collection';
+
+@import "../../node_modules/swiper/swiper-bundle.css"

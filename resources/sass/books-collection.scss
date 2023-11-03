@@ -1,0 +1,188 @@
+.book-collection {
+    margin-top: 20px;
+
+    &__title {
+        font-size: 32px;
+        color: #EAD7BB;
+        margin-bottom: 50px;
+    }
+
+    &__search-group {
+        position: relative;
+    }
+
+    &__search-icon-container {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    &__search-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__search-input {
+        padding-left: 50px;
+        border-radius: 10px !important;
+    }
+
+    &__cover {
+        width: 240px;
+        height: 320px;
+    }
+
+    &__book-container {
+        background-color: #aa5340;
+        padding: 15px 8px 15px 8px;
+        border-radius: 8px;
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    &__info-container {
+        padding: 0px 8px;
+    }
+
+    &__book-title {
+        width: 100%;
+        font-size: 26px;
+        margin-top: 10px;
+        color: #EAD7BB;
+        margin-bottom: 2px;
+        overflow: hidden;
+        text-transform: capitalize !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__book-author {
+        font-size: 20px;
+        color: #EAD7BB;
+        margin-bottom: 5px;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');
+            margin-right: 10px;
+        }
+    }
+
+    &__book-status {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #EAD7BB;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        background-color: #EAD7BB;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        color: #aa5340;
+
+        &:hover {
+            background-color: #FCE09B;
+            color: #6C3428;
+        }
+    }
+
+    .page-item {
+        background-color: #FCE09B;
+        transition: all 0.5s ease;
+
+        &:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        &:hover {
+            background-color: #aa5340;
+            .page-link {
+                color: #FCE09B;
+            }
+        }
+    }
+    
+    .active {
+        background-color: #EAD7BB !important;
+
+        &:hover {
+            background-color: #EAD7BB;
+            .page-link{
+                color: #aa5340;
+            }
+        }
+    }
+
+    .disabled {
+        background-color: #FCE09B !important;
+
+        &:hover {
+            background-color: #FCE09B;
+            .page-link{
+                color: #aa5340;
+            }
+        }
+    }
+    
+    .page-link {
+        background-color: transparent;
+        padding: 10px 16px;
+        color: #aa5340;
+        border: 2px solid #aa5340;
+        overflow: hidden;
+        --bs-pagination-active-bg: #aa5340 !important;
+
+        &:active{
+            box-shadow: none;
+        }
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+    .text-muted {
+        display: none;
+    }
+
+    @media screen and (max-width: 1199.98px) {
+        &__cover {
+            width: 200px;
+            height: 280px;
+        }
+
+        &__book-title {
+            font-size: 24px;
+        }
+
+        &__book-author {
+            font-size: 18px;
+        }
+        &__book-status {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        &__cover {
+            width: 220px;
+            height: 300px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.book-detail {
+    margin-top: 20px;
+
+    &__back-arrow {
+        width: 25px;
+        margin-right: 15px;
+    }
+
+    &__back-link {
+        text-decoration: none;
+        color: #F5F5DC;
+        font-size: 18px;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+
+    &__card {
+        padding: 40px 15px;
+        background-color: #EAD7BB;
+    }
+
+    &__book-info {
+        padding: 10px;
+    }
+
+    &__item-container {
+        margin-bottom: 10px;
+    }
+
+    &__title-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__title-icon {
+        width: 30px;
+        color: #aa5340;
+        margin-right: 10px;
+    }
+
+    &__title {
+        font-size: 24px;
+        color: #aa5340;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        margin-left: 40px;
+        font-size: 22px;
+        color: #6C3428;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23aa5340');
+            margin-right: 10px;
+        }
+    }
+
+    &__book-description-container {
+        padding: 10px;
+        background-color: #aa5340;
+        border-radius: 8px;
+    }
+
+    &__book-description {
+        text-indent: 70px;
+        font-size: 20px;
+        color: #F5F5DC;
+        height: 105px;
+    }
+
+    &__btn-container {
+        margin-top: 10px;
+    }
+
+    &__btn {
+        width: 80%;
+        background-color: #aa5340;
+        font-size: 18px;
+        font-weight: 600;
+        color: #F5F5DC;
+        padding: 5px 15px;
+    }
+}

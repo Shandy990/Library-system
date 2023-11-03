@@ -1,0 +1,508 @@
+body {
+    background-color: #C38154;
+    color: #333333;
+    font-family: 'EB Garamond', serif;
+}
+
+.main {
+    margin-top: 60px;
+}
+
+.custom-navbar {
+    background-color: #6C3428;
+
+    &__link {
+        font-size: 16px;
+        color: #F5F5DC !important;
+
+        .nav-link.show {
+            color: currentColor;
+        }
+
+        &:hover {
+            color: #C38154;
+        }
+
+        &:focus {
+            color: #C38154 !important;
+        }
+
+        &:active {
+            color: #C38154 !important;
+        }
+
+        &::after {
+            content: none !important;
+        }
+    }
+
+    &__dropdown {
+        background-color: #aa5340;
+        padding: 0;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    &__dropdown-item-container {
+        padding: 5px 10px;
+        background-color: transparent;
+        color: #F5F5DC;
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: #F5F5DC;
+            background-color: transparent;
+
+            &:first-child {
+                background-color: #C38154;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+
+            &:last-child {
+                background-color: #C38154;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+        }
+
+        &:focus {
+            color: #F5F5DC;
+            background-color: #aa5340;
+        }
+
+        &:active {
+            color: #F5F5DC;
+            background-color: #aa5340;
+        }
+    }
+
+    &__logout {
+        padding: 12px;
+        color: #F5F5DC;
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: #F5F5DC;
+            background-color: #C38154;
+            border-radius: 5px;
+        }
+    }
+
+    &__logo {
+        width: 97px;
+        height: 49px;
+        margin-top: -5px;
+    }
+}
+
+.jumbotron {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__pagination {
+        bottom: 5%;
+
+        .swiper-pagination-bullet {
+            width: 30px;
+            height: 3px;
+            border-radius: 0px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #F5F5DC;
+        }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+        height: unset;
+        .swiper-pagination-bullet {
+            width: 30px;
+            height: 3px;
+            border-radius: 0px;
+            background-color: #aa5340 !important;
+            opacity: 1 !important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #6C3428 !important;
+        }
+    }
+}
+
+.genre {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: 36px;
+        color: #F5F5DC;
+        margin-bottom: 15px;
+    }
+
+    &__image-container {
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    &__nav-btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6C3428;
+        background-color: #EAD7BB;
+        border-radius: 15px;
+        padding: 6px 8px 16px 8px;
+        transition: all 0.5s ease;
+
+        &:hover {
+            background-color: #fae2bf;
+            color: #6C3428;
+            transform: translateY(-50%) scale(1.1);
+        }
+    }
+
+    &__title-genre {
+        text-transform: capitalize;
+        font-size: 24px;
+        color: #F5F5DC;
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.35;
+    }
+
+    &__next {
+        right: -5%;
+    }
+
+    &__prev {
+        left: -5%;
+    }
+
+    @media screen and (max-width: 991.98px) {
+        .genreSwiper {
+            overflow: visible;
+        }
+    }
+
+    @media screen and (max-width: 1110.98px) {
+        &__nav-btn {
+            display: none;
+        }
+    }
+}
+
+.new-comming {
+    background-color: #EAD7BB;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &__ribbon {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        color: #6C3428;
+        width: 90px;
+        height: 90px;
+    }
+
+    &__title {
+        font-size: 36px;
+        color: #aa5340;
+        margin-bottom: 15px;
+    }
+
+    &__item-container {
+        background-color: #aa5340;
+        padding: 15px 8px 15px 8px;
+        border-radius: 8px;
+        position: relative;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    &__image {
+        background-color: #EAD7BB;
+        border-radius: 8px;
+        width: 240px;
+        height: 320px;
+    }
+
+    &__info-container {
+        padding: 0px 8px;
+    }
+
+    &__book-title {
+        width: 100%;
+        font-size: 26px;
+        margin-top: 10px;
+        color: #EAD7BB;
+        margin-bottom: 2px;
+        overflow: hidden;
+        text-transform: capitalize !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__book-author {
+        font-size: 20px;
+        color: #EAD7BB;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');
+            margin-right: 10px;
+        }
+    }
+
+    &__book-status {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #EAD7BB;
+        text-transform: capitalize;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        background-color: #EAD7BB;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        color: #aa5340;
+
+        &:hover {
+            background-color: #FCE09B;
+            color: #6C3428;
+        }
+    }
+
+    &__nav-btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #EAD7BB;
+        background-color: #6C3428;
+        border-radius: 15px;
+        padding: 6px 8px 16px 8px;
+        transition: all 0.5s ease;
+
+        &:hover {
+            background-color: #C38154;
+            color: #EAD7BB;
+            transform: translateY(-50%) scale(1.1);
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.35;
+    }
+
+    &__next {
+        right: 3.5%;
+    }
+
+    &__prev {
+        left: 3.5%;
+    }
+
+    @media screen and (max-width: 1199.98px) {
+        &__image {
+            width: 200px;
+            height: 280px;
+        }
+
+        &__book-title {
+            font-size: 24px;
+        }
+
+        &__book-author {
+            font-size: 18px;
+        }
+        &__book-status {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 1110.98px) {
+        &__nav-btn {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 991.98px) {
+        .new-comming-swiper {
+            overflow: visible;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        &__image {
+            width: 220px;
+            height: 300px;
+        }
+    }
+}
+
+.book-list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__header {
+        margin-bottom: 15px;
+        align-items: end;
+    }
+
+    &__title {
+        font-size: 36px;
+        color: #EAD7BB;
+        margin-bottom: 0px;
+    }
+
+    &__link-more {
+        text-decoration: none;
+        font-size: 22px;
+        color: #EAD7BB;
+        display: inline-flex;
+        align-items: end;
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: #fae2bf;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    &__link-arrow {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+    }
+
+    &__book-container {
+        background-color: #aa5340;
+        padding: 15px 8px 15px 8px;
+        border-radius: 8px;
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    &__info-container {
+        padding: 0px 8px;
+    }
+
+    &__book-title {
+        width: 100%;
+        font-size: 26px;
+        margin-top: 10px;
+        color: #EAD7BB;
+        margin-bottom: 2px;
+        overflow: hidden;
+        text-transform: capitalize !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__book-author {
+        font-size: 20px;
+        color: #EAD7BB;
+        margin-bottom: 5px;
+        overflow: hidden;
+        text-transform: capitalize !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');
+            margin-right: 10px;
+        }
+    }
+
+    &__book-status {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #EAD7BB;
+        text-transform: capitalize;
+
+        &::before {
+            content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        background-color: #EAD7BB;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        color: #aa5340;
+
+        &:hover {
+            background-color: #FCE09B;
+            color: #6C3428;
+        }
+    }
+
+    &__image {
+        width: 240px;
+        height: 320px;
+    }
+    
+    @media screen and (max-width: 1199.98px) {
+        &__image {            
+            width: 200px;
+            height: 280px;
+        }
+
+        &__book-title {
+            font-size: 24px;
+        }
+        &__book-author {
+            font-size: 18px;
+        }
+        &__book-status {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        &__image {
+            width: 220px;
+            height: 300px;
+        }
+    }
+}
