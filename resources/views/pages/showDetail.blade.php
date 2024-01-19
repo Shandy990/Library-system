@@ -19,12 +19,16 @@
             <div class="row">
                 <div class="col-lg-4 text-center">
                     <div class="book-detail__cover-container">
-                        <img src="{{ $book->cover?->getUrl() ?? 'http://via.placeholder.com/280x380' }}" alt="" class="book-detail__cover">
+                        <img src="{{ $book->cover?->getUrl() ?? 'http://via.placeholder.com/280x380' }}" alt=""
+                            class="book-detail__cover">
                     </div>
                     <div class="book-detail__btn-container">
                         <button class="btn book-detail__btn" data-bs-toggle="modal"
-                            data-bs-target="#borrowModal">Borrow</button>
+                            data-bs-target="@if($book->status == "available") #borrowModal @else #alertModal @endif">Borrow</button>
                     </div>
+                    {{-- <div class="book-detail__btn-container">
+                        <button class="btn book-detail__btn">Edit</button>
+                    </div> --}}
                 </div>
                 <div class="col-lg-8">
                     <div class="row">
@@ -108,34 +112,64 @@
                                 </svg>
                                 <p class="book-detail__title">Book Description</p>
                             </div>
-                            <div class="book-detail__book-description-container">
-                                <p class="book-detail__book-description">{{ $book->description }}</p>
-                            </div>
+                            <a href="#" class="book-detail__description-link">
+                                <div class="book-detail__book-description-container">
+                                    <p class="book-detail__book-description">{{ $book->description }}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+
+        <!-- Borrow Modal -->
         <div class="modal fade borrow-modal" id="borrowModal" tabindex="-1" aria-labelledby="borrowModal"
             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <form action="" method="post">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">REMEMBER !</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-dialog modal-dialog-centered borrow-modal__dialog">
+                <div class="modal-content borrow-modal__content">
+                    <form action="{{ route('book.borrowed', $book->id) }}" method="post">
+                        @csrf
+                        <div class="modal-header borrow-modal__header text-center" data-bs-theme="dark">
+                            <h3 class="modal-title borrow-modal__title" id="exampleModalLabel">REMEMBER !</h3>
+                            <button type="button" class="btn-close btn-close-light" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body borrow-modal__body">
                             <p class="borrow-modal__message">
-                                Your loan deadline is 5 days, you must return the book on or before October 10, 2023
+                                Your loan deadline is <span class="borrow-modal__reminder">5 days</span>, you must return
+                                the book on or before <span class="borrow-modal__reminder">{{ $date }}</span>
                             </p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                        <div class="modal-footer borrow-modal__footer">
+                            <button type="button" class="btn btn-secondary borrow-modal__close-btn"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary borrow-modal__borrow-btn">Borrow Book</button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Modal -->
+        <div class="modal fade borrow-modal" id="alertModal" tabindex="-1" aria-labelledby="alertModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered borrow-modal__dialog">
+                <div class="modal-content borrow-modal__content">
+                    <div class="modal-header borrow-modal__header text-center" data-bs-theme="dark">
+                        <h3 class="modal-title borrow-modal__title" id="exampleModalLabel">INFORMATION !</h3>
+                        <button type="button" class="btn-close btn-close-light" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body borrow-modal__body">
+                        <p class="borrow-modal__message text-center">
+                            We are so sorry, the status of this book is currently being borrowed, please borrow it another time when the book is available, thank you!
+                        </p>
+                    </div>
+                    <div class="modal-footer borrow-modal__footer">
+                        <button type="button" class="btn btn-secondary borrow-modal__close-btn"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>

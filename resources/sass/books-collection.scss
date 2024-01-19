@@ -64,6 +64,10 @@
         font-size: 20px;
         color: #EAD7BB;
         margin-bottom: 5px;
+        overflow: hidden;
+        text-transform: capitalize !important;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
         &::before {
             content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23EAD7BB');

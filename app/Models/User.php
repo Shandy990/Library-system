@@ -43,4 +43,8 @@ class User extends Authenticatable
         'password' => 'hashed',
         'is_admin' => 'boolean',
     ];
+
+    public function bookBorrowed () {
+        return $this->hasMany(Book::class);
+    }
 }

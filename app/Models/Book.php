@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Book extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'id',
@@ -19,6 +20,12 @@ class Book extends Model
         'publish_date',
         'description',
         'published_at',
+        'user_id',
+        'returned_at'
+    ];
+
+    protected $casts = [
+        'publish_date' => 'datetime',
     ];
 
     public function genres()

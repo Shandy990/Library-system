@@ -21,8 +21,18 @@
         background-color: #EAD7BB;
     }
 
+    &__cover {
+        width: 280px;
+        height: 380px;
+    }
+
+
     &__book-info {
         padding: 10px;
+
+        &:last-child {
+            padding-bottom: 0px !important;
+        }
     }
 
     &__item-container {
@@ -58,17 +68,28 @@
         }
     }
 
+    &__description-link {
+        text-decoration: none;
+    }
+
     &__book-description-container {
         padding: 10px;
         background-color: #aa5340;
         border-radius: 8px;
+        height: 100%;
+        max-height: 140px;
     }
-
+    
     &__book-description {
         text-indent: 70px;
         font-size: 20px;
+        margin-bottom: 0;
         color: #F5F5DC;
-        height: 105px;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     &__btn-container {
@@ -82,5 +103,80 @@
         font-weight: 600;
         color: #F5F5DC;
         padding: 5px 15px;
+        transition: all ease 0.5s;
+
+        &:hover {
+            background-color: #6C3428;
+            color: #FBECB2;
+        }
+
+        &:focus {
+            background-color: #6C3428;
+            color: #FBECB2;
+        }
+
+        &:active {
+            background-color: #6C3428 !important;
+            color: #FBECB2 !important;
+            transform: translateY(10px);
+        }
+    }
+}
+
+.borrow-modal {
+
+    &__content {
+        background-color: #6C3428;
+        color: #fae2bf;
+    }
+
+    &__header {
+        border-bottom: none;
+    }
+
+    &__title {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    &__footer {
+        border-top: none;
+    }
+
+    &__message {
+        font-size: 20px;
+        text-align: left;
+        color: #FBECB2;
+    }
+
+    &__reminder {
+        font-weight: bold !important;
+        color: #D83F31 !important;
+    }
+
+    &__borrow-btn {
+        background-color: #EAD7BB;
+        font-size: 16px;
+        color: #aa5340;
+        border: 1px solid #EAD7BB;
+
+        &:hover {
+            background-color: #FCE09B;
+            border: 1px solid #FCE09B;
+            color: #6C3428;
+        }
+    }
+
+    &__close-btn {
+        background-color: #5C3D2E;
+        font-size: 16px;
+        color: #EAD7BB;
+        border: 1px solid #5C3D2E;
+
+        &:hover {
+            background-color: #A27B5C;
+            border: 1px solid #A27B5C;
+            color: #fae2bf;
+        }
     }
 }

@@ -5,6 +5,7 @@ body {
 }
 
 .main {
+    min-height: 86vh;
     margin-top: 60px;
 }
 
@@ -505,4 +506,10 @@ body {
             height: 300px;
         }
     }
+}
+
+.footer {
+    padding: 4px;
+    color: white;
+    background-color: #6C3428;
 }

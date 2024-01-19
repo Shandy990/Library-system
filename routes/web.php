@@ -25,12 +25,25 @@ Route::get('/books/genre/{genre}', [BookController::class, 'showGenre'])->name('
 Route::get('/book-list', [BookController::class, 'bookList'])->name('book.list');
 
 Route::middleware('auth')->group(function () {
-Route::get('/add-book', [BookController::class, 'addBook'])->name('book.add');
-Route::get('/add-article', [BookController::class, 'addArticle'])->name('article.add');
-Route::post('/books', [BookController::class, 'storeBook'])->name('book.store');
+    Route::post('/books', [BookController::class, 'storeBook'])->name('book.store');
+    Route::post('/books-borrowed/{book}', [BookController::class, 'borrowed'])->name('book.borrowed');
+    Route::get('/books-user-borrowed', [BookController::class, 'userBookBorrowed'])->name('book.user.borrowed');
+    Route::post('/books-returned/{book}', [BookController::class, 'returned'])->name('book.returned');
+    Route::get('/about-us', [BookController::class, 'aboutUs'])->name('about.us');
 });
 
-Route::get('/try', function() {
+Route::middleware('can:is_admin,post')->group(function () {
+    Route::get('/add-book', [BookController::class, 'addBook'])->name('book.add');
+    Route::get('/add-article', [BookController::class, 'addArticle'])->name('article.add');
+    Route::get('/book-control', [BookController::class, 'bookControl'])->name('book.control');
+    Route::get('/book-control/edit/{book}', [BookController::class, 'bookEdit'])->name('book.edit');
+    Route::post('/book-control/edit/{book}', [BookController::class, 'bookEditUpdate'])->name('book.edit.update');
+    Route::post('/book-delete/{book}', [BookController::class, 'deleteBook'])->name('book.delete');
+    Route::post('/deleted-books/{book}', [BookController::class, 'destroyBook'])->name('book.destroy');
+    Route::get('/deleted-books', [BookController::class, 'deletedBooksCollection'])->name('book.deleted');
+});
+
+Route::get('/try', function () {
     return view('pages.try');
 });
 

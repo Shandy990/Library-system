@@ -21,12 +21,22 @@ class BookRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'title' => 'required|max:150|unique:books,title',
+
+        $rules = [
+            'title' => [
+                'required',
+                'max:150',
+            ],
             'author' => 'required|max:200',
             'publish_date' => 'required|date',
             'genres' => 'required|array|min:1',
-            'description' => 'required|max:3000',
+            'description' => 'required|max:150000',
         ];
+
+        if (!$this->book){
+            $rules['title'][]= 'unique:books,title';
+        }
+
+        return $rules;
     }
 }
