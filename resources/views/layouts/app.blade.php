@@ -95,7 +95,7 @@
                             <a class="nav-link custom-navbar__link" href="#">Events</a>
                         </li> --}}
 
-                        <li class="nav-item"> 
+                        <li class="nav-item">  
                             <a class="nav-link custom-navbar__link" href="{{ route('about.us') }}">About Us</a>
                         </li>
 
@@ -124,9 +124,9 @@
                                     <li class="custom-navbar__dropdown-item-container"><a
                                             class="dropdown-item custom-navbar__dropdown-item-container"
                                             href="{{ route('book.control') }}">Delete Book</a></li>
-                                    <li class="custom-navbar__dropdown-item-container"><a
+                                    {{-- <li class="custom-navbar__dropdown-item-container"><a
                                             class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('article.add') }}">Delete Artilce</a></li>
+                                            href="{{ route('article.add') }}">Delete Artilce</a></li> --}}
                                 </ul>
                             </li>
 
@@ -139,9 +139,9 @@
                                     <li class="custom-navbar__dropdown-item-container"><a
                                             class="dropdown-item custom-navbar__dropdown-item-container"
                                             href="{{ route('book.deleted') }}">Deleted Book</a></li>
-                                    <li class="custom-navbar__dropdown-item-container"><a
+                                    {{-- <li class="custom-navbar__dropdown-item-container"><a
                                             class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('article.add') }}">Deleted Artilce</a></li>
+                                            href="{{ route('article.add') }}">Deleted Artilce</a></li> --}}
                                 </ul>
                             </li>
                         @endcan
