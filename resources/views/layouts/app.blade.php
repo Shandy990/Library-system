@@ -158,8 +158,8 @@
 
         <div class="footer">
             <div class="footer__text-container text-center">
-                <p class="footer__text mb-0">Copyright Timebrary -SAS-<span class="footer__span">
-                        &copy;<?php echo date('Y'); ?>. All Rights Reserved</span></p>
+                <p class="footer__text mb-0">&copy; Copyright SisPerPus SMKTI Bali Global Denpasar -SAS-<span class="footer__span">
+                        &copy; <?php echo date('Y'); ?>. All Rights Reserved</span></p>
             </div>
         </div>
     </div>
