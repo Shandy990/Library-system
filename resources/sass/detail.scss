@@ -18,7 +18,7 @@
 
     &__card {
         padding: 40px 15px;
-        background-color: #EAD7BB;
+        background-color: #213b52;
     }
 
     &__cover {
@@ -47,20 +47,20 @@
 
     &__title-icon {
         width: 30px;
-        color: #aa5340;
+        color: #F5F5DC;
         margin-right: 10px;
     }
 
     &__title {
         font-size: 24px;
-        color: #aa5340;
+        color: #F5F5DC;
         margin-bottom: 0;
     }
 
     &__item {
         margin-left: 40px;
         font-size: 22px;
-        color: #6C3428;
+        color: #EAD7BB;
 
         &::before {
             content: url('https://api.iconify.design/gg/edit-black-point.svg?color=%23aa5340');
@@ -74,22 +74,23 @@
 
     &__book-description-container {
         padding: 10px;
-        background-color: #aa5340;
+        background-color: #032f5b;
         border-radius: 8px;
         height: 100%;
         max-height: 140px;
+        margin-top: .75rem;
     }
-    
+
     &__book-description {
         text-indent: 70px;
         font-size: 20px;
         margin-bottom: 0;
         color: #F5F5DC;
         height: 100%;
-        display: -webkit-box;
+        // display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
-        overflow: hidden;
+        overflow-y: scroll;
     }
 
     &__btn-container {
@@ -98,7 +99,7 @@
 
     &__btn {
         width: 80%;
-        background-color: #aa5340;
+        background-color: #001E3C;
         font-size: 18px;
         font-weight: 600;
         color: #F5F5DC;
@@ -106,28 +107,48 @@
         transition: all ease 0.5s;
 
         &:hover {
-            background-color: #6C3428;
-            color: #FBECB2;
+            background-color: #032f5b;
+            color: #e5e5db;
         }
 
         &:focus {
-            background-color: #6C3428;
-            color: #FBECB2;
+            background-color: #032f5b;
+            color: #e5e5db;
         }
 
         &:active {
-            background-color: #6C3428 !important;
-            color: #FBECB2 !important;
+            background-color: #032f5b !important;
+            color: #e5e5db !important;
             transform: translateY(10px);
         }
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 }
 
 .borrow-modal {
 
     &__content {
-        background-color: #6C3428;
-        color: #fae2bf;
+        background-color: #001E3C;
+        color: #F5F5DC;
     }
 
     &__header {
@@ -146,7 +167,7 @@
     &__message {
         font-size: 20px;
         text-align: left;
-        color: #FBECB2;
+        color: #F5F5DC;
     }
 
     &__reminder {
@@ -155,28 +176,28 @@
     }
 
     &__borrow-btn {
-        background-color: #EAD7BB;
+        background-color: #001E3C;
         font-size: 16px;
-        color: #aa5340;
-        border: 1px solid #EAD7BB;
+        color: #F5F5DC;
+        border: 1px solid #001E3C;
 
         &:hover {
-            background-color: #FCE09B;
-            border: 1px solid #FCE09B;
-            color: #6C3428;
+            background-color: #032f5b;
+            border: 1px solid #032f5b;
+            color: #e5e5db;
         }
     }
 
     &__close-btn {
-        background-color: #5C3D2E;
+        background-color: #8EA7E9;
         font-size: 16px;
         color: #EAD7BB;
-        border: 1px solid #5C3D2E;
+        border: 1px solid #8EA7E9;
 
         &:hover {
-            background-color: #A27B5C;
-            border: 1px solid #A27B5C;
-            color: #fae2bf;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
+            color: #F5F5DC;
         }
     }
 }

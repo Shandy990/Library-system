@@ -19,73 +19,73 @@
         [
             'genre' => 'fantasy',
             'logo' => 'assets/img/fantasy.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
         [
             'genre' => 'advanture',
             'logo' => 'assets/img/advanture.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
         [
             'genre' => 'romance',
             'logo' => 'assets/img/romance.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
         [
             'genre' => 'horror',
             'logo' => 'assets/img/horror.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
         [
             'genre' => 'comedy',
             'logo' => 'assets/img/comedy.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
         [
             'genre' => 'angst',
             'logo' => 'assets/img/angst.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
         [
             'genre' => 'family',
             'logo' => 'assets/img/family.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
     
         [
             'genre' => 'mystery',
             'logo' => 'assets/img/mystery.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
         [
             'genre' => 'kingdom',
             'logo' => 'assets/img/kingdom.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
         [
             'genre' => 'action',
             'logo' => 'assets/img/action.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
         [
             'genre' => 'history',
             'logo' => 'assets/img/history.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
         [
             'genre' => 'education',
             'logo' => 'assets/img/education.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
         [
             'genre' => 'biography',
             'logo' => 'assets/img/biography.png',
-            'background' => '#E2C799',
+            'background' => '#8EA7E9',
         ],
         [
             'genre' => 'food',
             'logo' => 'assets/img/food.png',
-            'background' => '#D7A86E',
+            'background' => '#7286D3',
         ],
     ];
     ?>

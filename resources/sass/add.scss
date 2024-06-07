@@ -2,14 +2,14 @@
 
     &__page-title {
         font-size: 30px;
-        color: #FCE09B;
+        color: #F5F5DC;
         padding-left: 30px;
     }
 
     &__card {
         padding: 20px;
         margin-top: 20px;
-        background-color: #6C3428;
+        background-color: #213b52;
         border-radius: 10px;
     }
 
@@ -17,7 +17,7 @@
         width: 280px;
         height: 380px;
         border-radius: 8px;
-        border: 3px solid #E1AA74;
+        border: 3px solid #032f5b;
     }
 
     &__upload-container {
@@ -25,7 +25,7 @@
     }
 
     &__upload {
-        background-color: #aa5340;
+        background-color: #001E3C;
         color: #F5F5DC;
         border-radius: 10px;
         font-size: 16px;
@@ -38,7 +38,8 @@
         cursor: pointer;
 
         &:hover {
-            background-color: #952323;
+            background-color: #032f5b;
+            color: #e5e5db;
         }
 
         &::-webkit-file-upload-button {
@@ -53,7 +54,7 @@
     &__label {
         padding-bottom: 8px;
         font-size: 18px;
-        color: #FCE09B;
+        color: #F5F5DC;
     }
 
     &__input-group {
@@ -62,21 +63,21 @@
 
     &__input {
         font-size: 18px;
-        background-color: #FCE09B;
-        border: 1px solid #FCE09B;
-        color: #aa5340;
+        background-color: #032f5b;
+        border: 1px solid #032f5b;
+        color: #EAD7BB;
         transition: all 0.5s ease;
 
         &:focus {
             box-shadow: none;
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
-            color: #952323;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
+            color: #F5F5DC;
         }
     }
 
     &__genre-name {
-        color: #FCE09B;
+        color: #F5F5DC;
         font-size: 16px;
         text-transform: capitalize;
     }
@@ -85,40 +86,40 @@
         padding: 8px;
         margin-right: 10px;
         border-radius: 120px !important;
-        background-color: #FCE09B;
-        border: 1px solid #FCE09B;
+        background-color: #7286D3;
+        border: 1px solid #7286D3;
         transition: all 0.5s ease;
 
         &:checked {
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
+            background-color: #8EA7E9;
+            border: 1px solid #8EA7E9;
         }
 
         &:focus {
             box-shadow: none;
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
+            background-color: #8EA7E9;
+            border: 1px solid #8EA7E9;
         }
     }
 
     &__text-area {
         font-size: 18px;
-        background-color: #FCE09B;
-        border: 1px solid #FCE09B;
-        color: #aa5340;
+        background-color: #032f5b;
+        border: 1px solid #032f5b;
+        color: #EAD7BB;
         transition: all 0.5s ease;
 
         &:focus {
             box-shadow: none;
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
-            color: #952323;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
+            color: #F5F5DC;
         }
     }
 
     &__sub-btn {
-        background-color: #aa5340;
-        border: 1px solid #aa5340;
+        background-color: #001E3C;
+        border: 1px solid #001E3C;
         color: #F5F5DC;
         border-radius: 10px;
         font-size: 16px;
@@ -127,21 +128,21 @@
         transition: all 0.5s ease;
 
         &:hover {
-            color: #F5F5DC;
-            background-color: #952323;
-            border: 1px solid #952323;
+            color: #e5e5db;
+            background-color: #032f5b;
+            border: 1px solid #032f5b;
         }
 
         &:active {
-            color: #F5F5DC;
-            background-color: #952323 !important;
-            border: 1px solid #952323 !important;
+            color: #e5e5db;
+            background-color: #032f5b !important;
+            border: 1px solid #032f5b !important;
         }
 
         &:focus {
-            color: #F5F5DC;
-            background-color: #952323 !important;
-            border: 1px solid #952323 !important;
+            color: #e5e5db;
+            background-color: #032f5b !important;
+            border: 1px solid #032f5b !important;
         }
     }
 
@@ -228,4 +229,24 @@
         }
     }
 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

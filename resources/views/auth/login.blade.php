@@ -6,7 +6,7 @@
             <div class="row justify-content-center align-items-center">
 
                 <div class="col-6 col-md-6 col-lg-6">
-                    <img src="{{ asset('assets/img/login.png') }}" alt="" class="login__image">
+                    <img src="{{ asset('assets/img/home-jumbo.png') }}" alt="" class="login__image">
                 </div>
 
                 <div class="col-6 col-md-6 col-lg-6">
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-1">
                                 <div class="col-md-8">
                                     <button type="submit" class="btn login__btn">
                                         {{ __('Login') }}

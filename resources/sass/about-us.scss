@@ -1,11 +1,12 @@
 .about-us {
+    color: #F5F5DC;
     &__row {
         min-height: 86vh;
         overflow: unset;
     }
 
     &__col {
-        overflow: hi;
+        overflow: hidden;
     }
 
     &__img-container {

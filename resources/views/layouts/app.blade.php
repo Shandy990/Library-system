@@ -22,175 +22,132 @@
 
 <body>
     <div id="app">
-        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav> --}}
-
         <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
             <div class="container-fluid">
-                <a class="navbar-brand custom-navbar__logo" href="{{ route('homepage') }}">
-                    <img src="{{ asset('assets/img/logo-2.png') }}" alt="" class="custom-navbar__logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-brand custom-navbar__logo custom-navbar__brand-title d-flex">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="custom-navbar__logo-img me-3"
+                        width="100%">
+                    Sistem Perpustakaan <br> SMK TI Bali Global Denpasar
+                </span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        {{-- <li class="nav-item">
-                            <a class="nav-link custom-navbar__link" href="#">Article</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-navbar__link" href="#">Events</a>
-                        </li> --}}
 
-                        <li class="nav-item">  
-                            <a class="nav-link custom-navbar__link" href="{{ route('about.us') }}">About Us</a>
-                        </li>
-
-                        @can('is_admin')
-                            <li class="nav-item dropdown">
-                                <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Add New
-                                </a>
-                                <ul class="dropdown-menu custom-navbar__dropdown">
-                                    <li class="custom-navbar__dropdown-item-container"><a
-                                            class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('book.add') }}">Add Book</a></li>
-                                    {{-- <li class="custom-navbar__dropdown-item-container"><a
-                                            class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('article.add') }}">Add Artilce</a></li> --}}
-                                </ul>
+                <div class="offcanvas offcanvas-end custom-navbar__offcanvas" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img src="{{ asset('assets/img/logo.png') }}" width="40vw" height="85%"
+                            class="custom-navbar__img" />
+                        <span class="custom-navbar__brand pb-0"> Pengaduan Siswa <br class="custom-navbar__br"> SMK TI
+                            Bali Global Denpasar </span>
+                        <button type="button" class="btn-close custom-navbar__btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-navbar__offcanvas-nav">
+                            <li class="nav-item">
+                                <a class="nav-link custom-navbar__link" href="{{ route('homepage') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-navbar__link" href="{{ route('about.us') }}">About Us</a>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Item Control
-                                </a>
-                                <ul class="dropdown-menu custom-navbar__dropdown">
-                                    <li class="custom-navbar__dropdown-item-container"><a
-                                            class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('book.control') }}">Delete Book</a></li>
-                                    {{-- <li class="custom-navbar__dropdown-item-container"><a
-                                            class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('article.add') }}">Delete Artilce</a></li> --}}
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Deleted Item
-                                </a>
-                                <ul class="dropdown-menu custom-navbar__dropdown">
-                                    <li class="custom-navbar__dropdown-item-container"><a
-                                            class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('book.deleted') }}">Deleted Book</a></li>
-                                    {{-- <li class="custom-navbar__dropdown-item-container"><a
-                                            class="dropdown-item custom-navbar__dropdown-item-container"
-                                            href="{{ route('article.add') }}">Deleted Artilce</a></li> --}}
-                                </ul>
-                            </li>
-                        @endcan
-
-                    </ul>
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link custom-navbar__link"
-                                        href="{{ route('login') }}">{{ __('Login') }}</a>
+                            @can('is_admin')
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Add New
+                                    </a>
+                                    <ul class="dropdown-menu custom-navbar__dropdown">
+                                        <li class="custom-navbar__dropdown-item-container"><a
+                                                class="dropdown-item custom-navbar__dropdown-item-container"
+                                                href="{{ route('book.add') }}">Add Book</a></li>
+                                        {{-- <li class="custom-navbar__dropdown-item-container"><a
+                                                class="dropdown-item custom-navbar__dropdown-item-container"
+                                                href="{{ route('article.add') }}">Add Artilce</a></li> --}}
+                                    </ul>
                                 </li>
-                            @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link custom-navbar__link"
-                                        href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Item Control
+                                    </a>
+                                    <ul class="dropdown-menu custom-navbar__dropdown">
+                                        <li class="custom-navbar__dropdown-item-container"><a
+                                                class="dropdown-item custom-navbar__dropdown-item-container"
+                                                href="{{ route('book.control') }}">Delete Book</a></li>
+                                        {{-- <li class="custom-navbar__dropdown-item-container"><a
+                                                class="dropdown-item custom-navbar__dropdown-item-container"
+                                                href="{{ route('article.add') }}">Delete Artilce</a></li> --}}
+                                    </ul>
                                 </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link custom dropdown-toggle custom-navbar__link"
-                                    href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
 
-                                <div class="dropdown-menu dropdown-menu-end  custom-navbar__dropdown"
-                                    aria-labelledby="navbarDropdown">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Deleted Item
+                                    </a>
+                                    <ul class="dropdown-menu custom-navbar__dropdown">
+                                        <li class="custom-navbar__dropdown-item-container"><a
+                                                class="dropdown-item custom-navbar__dropdown-item-container"
+                                                href="{{ route('book.deleted') }}">Deleted Book</a></li>
+                                        {{-- <li class="custom-navbar__dropdown-item-container"><a
+                                                class="dropdown-item custom-navbar__dropdown-item-container"
+                                                href="{{ route('article.add') }}">Deleted Artilce</a></li> --}}
+                                    </ul>
+                                </li>
+                            @endcan
 
-                                    <a class="dropdown-item custom-navbar__logout"
-                                        href="{{ route('book.user.borrowed') }}">
-                                        Borrowed Book
+                        </ul>
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            @guest
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <a class="nav-link custom-navbar__link"
+                                            href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </li>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link custom-navbar__link"
+                                            href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link custom dropdown-toggle custom-navbar__link"
+                                        href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
                                     </a>
 
-                                    <a class="dropdown-item custom-navbar__logout" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end  custom-navbar__dropdown"
+                                        aria-labelledby="navbarDropdown">
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                        <a class="dropdown-item custom-navbar__logout"
+                                            href="{{ route('book.user.borrowed') }}">
+                                            Borrowed Book
+                                        </a>
+
+                                        <a class="dropdown-item custom-navbar__logout" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -209,4 +166,3 @@
 </body>
 
 </html>
-

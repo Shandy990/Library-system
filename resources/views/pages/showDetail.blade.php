@@ -112,11 +112,11 @@
                                 </svg>
                                 <p class="book-detail__title">Book Description</p>
                             </div>
-                            <a href="#" class="book-detail__description-link">
+                            <span class="book-detail__description-link">
                                 <div class="book-detail__book-description-container">
                                     <p class="book-detail__book-description">{{ $book->description }}</p>
                                 </div>
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>

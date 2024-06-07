@@ -8,7 +8,7 @@
                     <h1 class="register__title-mobile">{{ __('Register') }}</h1>
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
-                    <img src="{{ asset('assets/img/register.png') }}" alt="" class="register__image">
+                    <img src="{{ asset('assets/img/home-jumbo.png') }}" alt="" class="register__image">
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
                     <h1 class="register__title text-center">{{ __('Register') }}</h1>

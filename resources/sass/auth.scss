@@ -2,89 +2,88 @@
     margin-top: 90px;
     
     &__image {
-        width: 100%;
+        width: 80%;
     }
     
     &__label {
         font-size: 20px;
-        color: #EAD7BB;
+        color: #F5F5DC;
     }
     
     &__input {
         font-size: 18px;
-        background-color: #FCE09B;
-        border: 1px solid #FCE09B;
-        color: #aa5340;
+        background-color: #032f5b;
+        border: 1px solid #032f5b;
+        color: #EAD7BB;
         transition: all 0.5s ease;
         margin-bottom: 10px;
         
         &:focus {
             box-shadow: none;
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
-            color: #952323;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
+            color: #F5F5DC;
         }
     }
     
     &__check-input {
         padding: 8px;
         margin-right: 10px;
-        background-color: #FCE09B;
-        border: 1px solid #FCE09B;
+        background-color: #7286D3;
+        border: 1px solid #7286D3;
         transition: all 0.5s ease;
         margin-bottom: 10px;
         
         &:checked {
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
+            background-color: #8EA7E9;
+            border: 1px solid #8EA7E9;
         }
         
         &:focus {
             box-shadow: none;
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
+            background-color: #8EA7E9;
+            border: 1px solid #8EA7E9;
         }
     }
 
     &__check-label {
-        color: #FCE09B;
+        color: #F5F5DC;
         font-size: 16px;
         text-transform: capitalize;
     }
     
     &__btn {
-        background-color: #aa5340;
-        border: 1px solid #aa5340;
-        color: #F5F5DC;
+        background-color: #8EA7E9;
+        border: 1px solid #8EA7E9;
+        color: #e5e5db;
         border-radius: 10px;
         font-size: 16px;
         padding-bottom: 8px;
         padding-top: 8px;
         transition: all 0.5s ease;
-        margin-bottom: 20px;
         
         &:hover {
-            color: #F5F5DC;
-            background-color: #952323;
-            border: 1px solid #952323;
+            color: #e5e5db;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
         }
         
         &:active {
-            color: #F5F5DC;
-            background-color: #952323 !important;
-            border: 1px solid #952323 !important;
+            color: #e5e5db;
+            background-color: #7286D3 !important;
+            border: 1px solid #7286D3 !important;
         }
         
         &:focus {
-            color: #F5F5DC;
-            background-color: #952323 !important;
-            border: 1px solid #952323 !important;
+            color: #e5e5db;
+            background-color: #7286D3 !important;
+            border: 1px solid #7286D3 !important;
         }
     }
     
     &__link {
         text-decoration: none;
-        color: #FCE09B;
+        color: #F5F5DC;
         font-size: 18px;
         
         &:hover {
@@ -102,7 +101,7 @@
     margin-top: 35px;
 
     &__title {
-        color: #EAD7BB;
+        color: #F5F5DC;
         margin-bottom: 5px;
     }
     
@@ -111,57 +110,57 @@
     }
     
     &__image {
-        width: 100%;
+        width: 80%;
     }
     
     &__label {
         font-size: 20px;
-        color: #EAD7BB;
+        color: #F5F5DC;
     }
     
     &__input {
         font-size: 18px;
-        background-color: #FCE09B;
-        border: 1px solid #FCE09B;
-        color: #aa5340;
+        background-color: #032f5b;
+        border: 1px solid #032f5b;
+        color: #F5F5DC;
         transition: all 0.5s ease;
         margin-bottom: 10px;
         
         &:focus {
             box-shadow: none;
-            background-color: #E1AA74;
-            border: 1px solid #E1AA74;
-            color: #952323;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
+            color: #F5F5DC;
         }
     }
     
     &__btn {
-        background-color: #aa5340;
-        border: 1px solid #aa5340;
-        color: #F5F5DC;
+        background-color: #8EA7E9;
+        border: 1px solid #8EA7E9;
+        color: #e5e5db;
         border-radius: 10px;
         font-size: 16px;
         padding-bottom: 8px;
         padding-top: 8px;
         transition: all 0.5s ease;
-        margin-bottom: 20px;
+        margin-top: 1rem;
         
         &:hover {
-            color: #F5F5DC;
-            background-color: #952323;
-            border: 1px solid #952323;
+            color: #e5e5db;
+            background-color: #7286D3;
+            border: 1px solid #7286D3;
         }
         
         &:active {
-            color: #F5F5DC;
-            background-color: #952323 !important;
-            border: 1px solid #952323 !important;
+            color: #e5e5db;
+            background-color: #7286D3 !important;
+            border: 1px solid #7286D3 !important;
         }
         
         &:focus {
-            color: #F5F5DC;
-            background-color: #952323 !important;
-            border: 1px solid #952323 !important;
+            color: #e5e5db;
+            background-color: #7286D3 !important;
+            border: 1px solid #7286D3 !important;
         }
     }
 }

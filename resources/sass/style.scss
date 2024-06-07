@@ -1,16 +1,22 @@
 body {
-    background-color: #C38154;
+    background-color: #001E3C;
     color: #333333;
     font-family: 'EB Garamond', serif;
 }
 
 .main {
     min-height: 86vh;
-    margin-top: 60px;
+    margin-top: 5%;
 }
 
 .custom-navbar {
-    background-color: #6C3428;
+    background-color: #001E3C;
+
+    &__brand-title {
+        color: #F5F5DC !important;
+        line-height: normal;
+        text-align: center;
+    }
 
     &__link {
         font-size: 16px;
@@ -21,15 +27,15 @@ body {
         }
 
         &:hover {
-            color: #C38154;
+            color: #d69d18 !important;
         }
 
         &:focus {
-            color: #C38154 !important;
+            color: #FDC134 !important;
         }
 
         &:active {
-            color: #C38154 !important;
+            color: #FDC134 !important;
         }
 
         &::after {
@@ -38,7 +44,7 @@ body {
     }
 
     &__dropdown {
-        background-color: #aa5340;
+        background-color: #001E3C;
         padding: 0;
         border-radius: 5px;
         overflow: hidden;
@@ -52,16 +58,16 @@ body {
 
         &:hover {
             color: #F5F5DC;
-            background-color: transparent;
+            background-color: #ADC7DE;
 
             &:first-child {
-                background-color: #C38154;
+                background-color: #ADC7DE;
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px;
             }
 
             &:last-child {
-                background-color: #C38154;
+                background-color: #ADC7DE;
                 border-bottom-right-radius: 5px;
                 border-bottom-left-radius: 5px;
             }
@@ -85,15 +91,40 @@ body {
 
         &:hover {
             color: #F5F5DC;
-            background-color: #C38154;
-            border-radius: 5px;
+            background-color: #ADC7DE;
+
+            &:first-child {
+                background-color: #ADC7DE;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+
+            &:last-child {
+                background-color: #ADC7DE;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
         }
     }
 
     &__logo {
-        width: 97px;
-        height: 49px;
+        width: 2.6rem;
         margin-top: -5px;
+    }
+
+    &__offcanvas-nav {
+        margin-left: 14rem;
+    }
+
+    &__offcanvas {
+        background-color: #001E3C;
+    }
+
+    &__btn-close {
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
     }
 }
 
@@ -114,6 +145,7 @@ body {
             width: 30px;
             height: 3px;
             border-radius: 0px;
+            background-color: #ADC7DE;
         }
 
         .swiper-pagination-bullet-active {
@@ -123,6 +155,7 @@ body {
 
     @media screen and (max-width: 1199.98px) {
         height: unset;
+
         .swiper-pagination-bullet {
             width: 30px;
             height: 3px;
@@ -130,6 +163,7 @@ body {
             background-color: #aa5340 !important;
             opacity: 1 !important;
         }
+
         .swiper-pagination-bullet-active {
             background-color: #6C3428 !important;
         }
@@ -168,7 +202,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         color: #6C3428;
-        background-color: #EAD7BB;
+        background-color: #7286D3;
         border-radius: 15px;
         padding: 6px 8px 16px 8px;
         transition: all 0.5s ease;
@@ -212,7 +246,7 @@ body {
 }
 
 .new-comming {
-    background-color: #EAD7BB;
+    background-color: #213b52;
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
@@ -220,20 +254,20 @@ body {
     &__ribbon {
         position: absolute;
         top: -10px;
-        right: -10px;
-        color: #6C3428;
+        right: -20px;
+        color: #264a6e;
         width: 90px;
         height: 90px;
     }
 
     &__title {
         font-size: 36px;
-        color: #aa5340;
+        color: #F5F5DC;
         margin-bottom: 15px;
     }
 
     &__item-container {
-        background-color: #aa5340;
+        background-color: #7286D3;
         padding: 15px 8px 15px 8px;
         border-radius: 8px;
         position: relative;
@@ -259,7 +293,7 @@ body {
         width: 100%;
         font-size: 26px;
         margin-top: 10px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         margin-bottom: 2px;
         overflow: hidden;
         text-transform: capitalize !important;
@@ -269,7 +303,7 @@ body {
 
     &__book-author {
         font-size: 20px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         margin-bottom: 5px;
         text-transform: capitalize;
         overflow: hidden;
@@ -285,7 +319,7 @@ body {
     &__book-status {
         font-size: 20px;
         margin-bottom: 10px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         text-transform: capitalize;
 
         &::before {
@@ -296,15 +330,15 @@ body {
 
     &__btn {
         width: 100%;
-        background-color: #EAD7BB;
+        background-color: #001E3C;
         padding: 5px 10px;
         font-size: 16px;
         border-radius: 8px;
-        color: #aa5340;
+        color: #F5F5DC;
 
         &:hover {
-            background-color: #FCE09B;
-            color: #6C3428;
+            background-color: #032f5b;
+            color: #e5e5db;
         }
     }
 
@@ -315,7 +349,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         color: #EAD7BB;
-        background-color: #6C3428;
+        background-color: #7286D3;
         border-radius: 15px;
         padding: 6px 8px 16px 8px;
         transition: all 0.5s ease;
@@ -352,6 +386,7 @@ body {
         &__book-author {
             font-size: 18px;
         }
+
         &__book-status {
             font-size: 18px;
         }
@@ -388,14 +423,14 @@ body {
 
     &__title {
         font-size: 36px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         margin-bottom: 0px;
     }
 
     &__link-more {
         text-decoration: none;
         font-size: 22px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         display: inline-flex;
         align-items: end;
         transition: all 0.5s ease;
@@ -414,7 +449,7 @@ body {
     }
 
     &__book-container {
-        background-color: #aa5340;
+        background-color: #7286D3;
         padding: 15px 8px 15px 8px;
         border-radius: 8px;
         position: relative;
@@ -429,7 +464,7 @@ body {
         width: 100%;
         font-size: 26px;
         margin-top: 10px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         margin-bottom: 2px;
         overflow: hidden;
         text-transform: capitalize !important;
@@ -439,7 +474,7 @@ body {
 
     &__book-author {
         font-size: 20px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         margin-bottom: 5px;
         overflow: hidden;
         text-transform: capitalize !important;
@@ -455,7 +490,7 @@ body {
     &__book-status {
         font-size: 20px;
         margin-bottom: 10px;
-        color: #EAD7BB;
+        color: #F5F5DC;
         text-transform: capitalize;
 
         &::before {
@@ -466,15 +501,15 @@ body {
 
     &__btn {
         width: 100%;
-        background-color: #EAD7BB;
+        background-color: #001E3C;
         padding: 5px 10px;
         font-size: 16px;
         border-radius: 8px;
-        color: #aa5340;
+        color: #F5F5DC;
 
         &:hover {
-            background-color: #FCE09B;
-            color: #6C3428;
+            background-color: #032f5b;
+            color: #e5e5db;
         }
     }
 
@@ -482,9 +517,9 @@ body {
         width: 240px;
         height: 320px;
     }
-    
+
     @media screen and (max-width: 1199.98px) {
-        &__image {            
+        &__image {
             width: 200px;
             height: 280px;
         }
@@ -492,9 +527,11 @@ body {
         &__book-title {
             font-size: 24px;
         }
+
         &__book-author {
             font-size: 18px;
         }
+
         &__book-status {
             font-size: 18px;
         }
@@ -509,7 +546,8 @@ body {
 }
 
 .footer {
+    margin-top: 1.5rem;
     padding: 4px;
     color: white;
-    background-color: #6C3428;
+    background-color: #213b52;
 }

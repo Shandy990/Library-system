@@ -22,14 +22,15 @@
                         </div>
                         <div class="about-us__desc-container">
                             <p class="about-us__desc">
-                                Selamat datang di Perpustakaan Timebrary, destinasi literasi eksklusif di Bali
-                                yang telah menginspirasi para pecinta buku selama lebih dari 12 tahun. Didirikan pada tahun
-                                2018 oleh seorang pengusaha Jepang, perpustakaan kami berkomitmen untuk
-                                menyajikan keberagaman penulis dan wawasan. Dengan lokasi yang memikat di Bali, kami
-                                menawarkan pengalaman membaca yang unik di tengah keindahan alam dan budaya pulau ini.
-                                Teruslah menemukan dunia fantastis di rak-rak buku kami, di mana setiap karya adalah jendela
-                                ke pengetahuan dan petualangan. Terima kasih telah menjadi bagian dari perjalanan literasi
-                                kami.
+                                Selamat datang di Perpustakaan SMK TI Bali Global Denpasar! Sejak didirikan pada tahun 2007,
+                                perpustakaan kami telah menjadi pusat pembelajaran yang menyediakan akses ke berbagai
+                                literatur dan sumber daya edukatif berkualitas. Kami berkomitmen untuk mendukung
+                                pengembangan literasi informasi dan keterampilan riset siswa melalui koleksi buku, e-book,
+                                jurnal, dan database akademik yang terus berkembang. Dengan fasilitas modern seperti ruang
+                                baca yang nyaman, akses komputer dengan internet cepat, dan ruang diskusi, kami menciptakan
+                                lingkungan belajar yang inspiratif dan kondusif. Tim pustakawan kami siap membantu Anda
+                                dalam pencarian informasi dan bahan bacaan yang dibutuhkan. Kami berharap dapat menjadi
+                                bagian penting dalam perjalanan belajar Anda di SMK TI Bali Global Denpasar!
                             </p>
                         </div>
                     </div>
