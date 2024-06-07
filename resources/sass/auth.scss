@@ -1,6 +1,4 @@
 .login {
-    margin-top: 90px;
-    
     &__image {
         width: 80%;
     }
@@ -95,11 +93,25 @@
             color: #F5F5DC;
         }
     }
+
+    @media screen and (max-width:991.98px) {
+        .row {
+            flex-direction: column !important;
+        }
+        &__image {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &__btn {
+            width: 100%;
+        }
+        &__link {
+            width: 100%;
+        }
+    }
 }
 
 .register {
-    margin-top: 35px;
-
     &__title {
         color: #F5F5DC;
         margin-bottom: 5px;
@@ -161,6 +173,19 @@
             color: #e5e5db;
             background-color: #7286D3 !important;
             border: 1px solid #7286D3 !important;
+        }
+    }
+
+    @media screen and (max-width:991.98px) {
+        .row {
+            flex-direction: column !important;
+        }
+        &__image {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &__btn {
+            width: 100%;
         }
     }
 }

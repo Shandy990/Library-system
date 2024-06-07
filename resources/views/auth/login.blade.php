@@ -5,11 +5,11 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
 
-                <div class="col-6 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6">
                     <img src="{{ asset('assets/img/home-jumbo.png') }}" alt="" class="login__image">
                 </div>
 
-                <div class="col-6 col-md-6 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6">
                     <div class="login__container">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -40,7 +40,7 @@
                                 @enderror
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-check">
                                         <input class="form-check-input login__check-input" type="checkbox" name="remember" id="remember"
                                             {{ old('remember') ? 'checked' : '' }}>
@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="row mt-1">
-                                <div class="col-md-8">
+                                <div class="col-md-12 col-lg-8">
                                     <button type="submit" class="btn login__btn">
                                         {{ __('Login') }}
                                     </button>

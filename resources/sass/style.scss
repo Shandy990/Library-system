@@ -6,7 +6,11 @@ body {
 
 .main {
     min-height: 86vh;
-    margin-top: 5%;
+    margin-top: 15vh;
+
+    @media screen and (max-width:425.98px) {
+        margin-top: 20%;
+    }
 }
 
 .custom-navbar {
@@ -113,7 +117,7 @@ body {
     }
 
     &__offcanvas-nav {
-        margin-left: 14rem;
+        margin-left: 2rem;
     }
 
     &__offcanvas {
@@ -125,6 +129,65 @@ body {
             border: none;
             box-shadow: none;
         }
+    }
+
+    @media screen and (max-width: 991.98px) {
+        &__logo-img {
+            margin-right: 2.5rem !important;
+        }
+
+        &__toggler {
+            border-color: #ADC7DE;
+            background-color: rgba(173, 199, 222, 0.8);
+        }
+
+        &__item {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &__link {
+            margin-left: 0 !important;
+
+            &--active {
+                margin-left: 0 !important;
+            }
+        }
+
+        &__offcanvas-nav-auth {
+            width: 80% !important;
+            margin-right: auto;
+        }
+
+        .offcanvas-body {
+            padding-bottom: 0 !important;
+        }
+    }
+
+    @media screen and (max-width: 425.98px) {
+        &__logo-img {
+            width: 90%;
+        }
+
+        &__toggler {
+            padding: .3rem .6rem !important;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:active {
+                box-shadow: none;
+            }
+        }
+
     }
 }
 
@@ -281,7 +344,7 @@ body {
     &__image {
         background-color: #EAD7BB;
         border-radius: 8px;
-        width: 240px;
+        width: 90% !important;
         height: 320px;
     }
 
@@ -514,16 +577,11 @@ body {
     }
 
     &__image {
-        width: 240px;
-        height: 320px;
+        width: 70% !important;
+        height: 100%;
     }
 
     @media screen and (max-width: 1199.98px) {
-        &__image {
-            width: 200px;
-            height: 280px;
-        }
-
         &__book-title {
             font-size: 24px;
         }
@@ -534,13 +592,6 @@ body {
 
         &__book-status {
             font-size: 18px;
-        }
-    }
-
-    @media screen and (max-width: 767.98px) {
-        &__image {
-            width: 220px;
-            height: 300px;
         }
     }
 }

@@ -22,17 +22,17 @@
 
 <body>
     <div id="app">
-        <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg custom-navbar"  data-bs-theme="dark">
             <div class="container-fluid">
-                <span class="navbar-brand custom-navbar__logo custom-navbar__brand-title d-flex">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="custom-navbar__logo-img me-3"
+                <span class="navbar-brand custom-navbar__logo d-flex">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="" class="custom-navbar__logo-img"
                         width="100%">
-                    Sistem Perpustakaan <br> SMK TI Bali Global Denpasar
                 </span>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <span class="custom-navbar__brand-title">Sistem Perpustakaan <br> SMK TI Bali Global Denpasar</span>
+                <button class="navbar-toggler custom-navbar__toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon custom-navbar__toggler-icon"></span>
                 </button>
 
                 <div class="offcanvas offcanvas-end custom-navbar__offcanvas" tabindex="-1" id="offcanvasNavbar"
@@ -40,22 +40,22 @@
                     <div class="offcanvas-header">
                         <img src="{{ asset('assets/img/logo.png') }}" width="40vw" height="85%"
                             class="custom-navbar__img" />
-                        <span class="custom-navbar__brand pb-0"> Pengaduan Siswa <br class="custom-navbar__br"> SMK TI
-                            Bali Global Denpasar </span>
+                        <span class="custom-navbar__brand-title">Sistem Perpustakaan <br> SMK TI Bali Global
+                            Denpasar</span>
                         <button type="button" class="btn-close custom-navbar__btn-close" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-navbar__offcanvas-nav">
-                            <li class="nav-item">
+                            <li class="nav-item custom-navbar__item">
                                 <a class="nav-link custom-navbar__link" href="{{ route('homepage') }}">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item custom-navbar__item">
                                 <a class="nav-link custom-navbar__link" href="{{ route('about.us') }}">About Us</a>
                             </li>
 
                             @can('is_admin')
-                                <li class="nav-item dropdown">
+                                <li class="nav-item custom-navbar__item dropdown">
                                     <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Add New
@@ -70,7 +70,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="nav-item dropdown">
+                                <li class="nav-item custom-navbar__item dropdown">
                                     <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Item Control
@@ -85,7 +85,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="nav-item dropdown">
+                                <li class="nav-item custom-navbar__item dropdown">
                                     <a class="nav-link custom-navbar__link dropdown-toggle" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Deleted Item
@@ -102,23 +102,23 @@
                             @endcan
 
                         </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom-navbar__offcanvas-nav-auth">
                             @guest
                                 @if (Route::has('login'))
-                                    <li class="nav-item">
+                                    <li class="nav-item custom-navbar__item">
                                         <a class="nav-link custom-navbar__link"
                                             href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                                 @endif
 
                                 @if (Route::has('register'))
-                                    <li class="nav-item">
+                                    <li class="nav-item custom-navbar__item">
                                         <a class="nav-link custom-navbar__link"
                                             href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                                 @endif
                             @else
-                                <li class="nav-item dropdown">
+                                <li class="nav-item custom-navbar__item dropdown">
                                     <a id="navbarDropdown" class="nav-link custom dropdown-toggle custom-navbar__link"
                                         href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" v-pre>

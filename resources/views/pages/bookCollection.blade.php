@@ -7,10 +7,10 @@
         <h1 class="book-collection__title text-center">Book Collection</h1>
 
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-12 col-lg-9">
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-12 col-lg-3">
                 <div class="input-group mb-3 collection__search-group">
                     <span class="input-group-text book-collection__search-icon-container" id="basic-addon1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="book-collection__search-icon" viewBox="0 0 512 512">
@@ -25,7 +25,7 @@
                 </div>
             </div>
             @foreach ($collection as $book)
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <div class="book-collection__book-container">
                         <div class="book-collection__cover-container text-center">
                             <img src="{{ $book->cover?->getUrl() ?? 'http://via.placeholder.com/240x320'}}" alt="" class="book-collection__cover">

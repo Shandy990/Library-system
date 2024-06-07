@@ -23,13 +23,13 @@ Route::get('/', [BookController::class, 'index'])->name('homepage');
 Route::get('/books/{book}', [BookController::class, 'show'])->name('book.show');
 Route::get('/books/genre/{genre}', [BookController::class, 'showGenre'])->name('genre.show');
 Route::get('/book-list', [BookController::class, 'bookList'])->name('book.list');
+Route::get('/about-us', [BookController::class, 'aboutUs'])->name('about.us');
 
 Route::middleware('auth')->group(function () {
     Route::post('/books', [BookController::class, 'storeBook'])->name('book.store');
     Route::post('/books-borrowed/{book}', [BookController::class, 'borrowed'])->name('book.borrowed');
     Route::get('/books-user-borrowed', [BookController::class, 'userBookBorrowed'])->name('book.user.borrowed');
     Route::post('/books-returned/{book}', [BookController::class, 'returned'])->name('book.returned');
-    Route::get('/about-us', [BookController::class, 'aboutUs'])->name('about.us');
 });
 
 Route::middleware('can:is_admin,post')->group(function () {

@@ -6,10 +6,10 @@
     <div class="genre-show container">
         <h1 class="show-genre__title text-center">Book Collection</h1>
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-12 col-lg-9">
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-12 col-lg-3">
                 <div class="input-group mb-3 show-genre__search-group">
                     <span class="input-group-text show-genre__search-icon-container" id="basic-addon1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="show-genre__search-icon" viewBox="0 0 512 512">
@@ -25,7 +25,7 @@
                 <h2 class="show-genre__not-found">There is no data for this collection</h2>
             @else
                 @foreach ($genreCollection as $book)
-                    <div class="col-6 col-md-4 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="show-genre__book-container">
                             <div class="show-genre__cover-container text-center">
                                 <img src="{{ $book->cover?->getUrl() ?? 'http://via.placeholder.com/240x320' }}"

@@ -103,7 +103,7 @@
     </div>
 
     <div class="genre container">
-        <h1 class="genre__title">Genre Collection</h1>
+        <h1 class="genre__title fs-2">Genre Collection</h1>
         <div class="swiper genreSwiper">
             <div class="swiper-wrapper">
                 @foreach ($genreList as $genre)
@@ -113,7 +113,7 @@
                                 <img src="{{ asset($genre['logo']) }}" alt="" class="genre__image">
                             </div>
                             <div class="genre__title-contaier text-center">
-                                <h2 class="genre__title-genre">{{ $genre['genre'] }}</h2>
+                                <h2 class="genre__title-genre fs-4">{{ $genre['genre'] }}</h2>
                             </div>
                         </a>
                     </div>
@@ -134,7 +134,7 @@
 
     <div class="new-comming">
         <div class="container">
-            <h1 class="new-comming__title">
+            <h1 class="new-comming__title fs-2">
                 New Comming Book!
             </h1>
             <div class="swiper new-comming-swiper">
@@ -185,10 +185,10 @@
         <div class="book-list__title-container">
             <div class="row book-list__header">
                 <div class="book-list__title-container col-6">
-                    <h2 class="book-list__title">Book List</h2>
+                    <h2 class="book-list__title fs-2">Book List</h2>
                 </div>
                 <div class="book-list__more-container col-6 text-end">
-                    <a href="{{ route('book.list') }}" class="book-list__link-more">
+                    <a href="{{ route('book.list') }}" class="book-list__link-more fs-2">
                         See More
                         <svg xmlns="http://www.w3.org/2000/svg" class="book-list__link-arrow" viewBox="0 0 24 24">
                             <path fill="none" stroke="currentColor"
@@ -199,7 +199,7 @@
             </div>
             <div class="row">
                 @foreach ($bookCollection->slice(0, 12) as $book)
-                    <div class="col-6 col-md-4 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="book-list__book-container">
                             <div class="book-list__image-container text-center">
                                 <img src="{{ $book->cover?->getUrl() ?? 'http://via.placeholder.com/240x320' }}"

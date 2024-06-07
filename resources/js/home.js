@@ -15,16 +15,20 @@ const jumboSwiper = new Swiper(".jumboSwiper", {
 
 const genreSwiper = new Swiper(".genreSwiper", {
     breakpoints: {
-        567: {
-            slidesPerView: 3,
+        320: {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+        },
+        426: {
+            slidesPerView: 3.5,
             spaceBetween: 15,
         },
         768: {
-            slidesPerView: 4,
+            slidesPerView: 4.5,
             spaceBetween: 15,
         },
         992: {
-            slidesPerView: 5,
+            slidesPerView: 5.5,
             spaceBetween: 15,
             navigation: {
                 nextEl: ".genre__next",
@@ -36,12 +40,24 @@ const genreSwiper = new Swiper(".genreSwiper", {
 
 const newComingSwiper = new Swiper(".new-comming-swiper", {
     breakpoints: {
-        567: {
-            slidesPerView: 2,
+        320: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+        },
+        375: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+        },
+        425: {
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+        },
+        575: {
+            slidesPerView: 2.5,
             spaceBetween: 25,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 3.5,
             spaceBetween: 20,
         },
         992: {

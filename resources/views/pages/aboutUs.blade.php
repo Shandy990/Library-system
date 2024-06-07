@@ -6,14 +6,14 @@
     <div class="about-us">
         <div class="about-us__container container">
             <div class="row about-us__row">
-                <div class="col-5 about-us__col">
+                <div class="col-12 col-lg-5 about-us__col">
                     <div class="about-us__img-container">
                         <img src="{{ asset('assets/img/about-us-1.jpg') }}" alt="" class="about-us__img">
                         <img src="{{ asset('assets/img/about-us-3.jpeg') }}" alt="" class="about-us__img--3">
                         <img src="{{ asset('assets/img/about-us-2.jpg') }}" alt="" class="about-us__img--2">
                     </div>
                 </div>
-                <div class="col-7 about-us__col">
+                <div class="col-12 col-lg-7 about-us__col--right">
                     <div class="about-us__text-container">
                         <div class="about-us__title-container">
                             <h1 class="about-us__title">
